@@ -917,15 +917,17 @@ void reportVehicleState() {
  
   void initSlowTelemetry() {
 
-    Serial2.begin(1200);
-    slowTelemetryByte = 255;
+//    Serial2.begin(1200);
+      Serial.begin(111111);
+       slowTelemetryByte = 255;
   }
    
   /* 100Hz task, sends data out byte by byte */
   void updateSlowTelemetry100Hz() {
 
     if (slowTelemetryByte < TELEMETRY_MSGSIZE_ECC ) {
-      Serial2.write(telemetryBuffer.bytes[slowTelemetryByte]);
+//      Serial2.write(telemetryBuffer.bytes[slowTelemetryByte]);
+        Serial.write(telemetryBuffer.bytes[slowTelemetryByte]);
       slowTelemetryByte++;
     }
     else {

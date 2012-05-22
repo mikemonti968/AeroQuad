@@ -76,7 +76,7 @@
 #define HeadingMagHold // Enables Magnetometer, gets automatically selected if CHR6DM is defined
 #define AltitudeHoldBaro // Enables BMP085 Barometer
 #define AltitudeHoldRangeFinder // Enable altitude hold with range finder, Not displayed on the configurator
-//#define AutoLanding // Enable auto landing on channel AUX3 of the remote, NEED AltitudeHoldBaro AND AltitudeHoldRangeFinder
+#define AutoLanding // Enable auto landing on channel AUX3 of the remote, NEED AltitudeHoldBaro AND AltitudeHoldRangeFinder
 
 #define UseGPS // Try to auto-detect the GPS, may have some detection trouble making the connection to the configurator not working
 //#define UseGPS_NMEA   // force the use of NMEA GPS
@@ -92,7 +92,7 @@
 // *******************************************************************************************************************************
 #define BattMonitor            // Enable Battery monitor
 #define BattMonitorAutoDescent // NEED BattMonitor defined. if you want the craft to auto descent when the battery reach the alarm voltage
-#define POWERED_BY_VIN         // NEED BattMonitor defined. Uncomment this if your v2.x is powered directly by the vin/gnd of the arduino
+//#define POWERED_BY_VIN         // NEED BattMonitor defined. Uncomment this if your v2.x is powered directly by the vin/gnd of the arduino
 //
 // Advanced configuration. Please refer to wiki for instructions
 //#define BattCustomConfig DEFINE_BATTERY(3,0,15,1.2,2,500,-251.5) // cpin=BM_NOPIN if no sensor
@@ -104,13 +104,13 @@
 //#define NormalReceiver // this do nothing really but, it indicate users that they don't have to define other option here if they have a normal receiver
 //#define RemotePCReceiver // EXPERIMENTAL Use PC as transmitter via serial communicator with XBEE
 //#define ReceiverPPM // Use a ppm receiver
-//#define ReceiverHWPPM // Use a ppm receiver with HW timer, needs a HW modification (see Libraries/AQ_Receiver/Receiver_HWPPM.h)
+#define ReceiverHWPPM // Use a ppm receiver with HW timer, needs a HW modification (see Libraries/AQ_Receiver/Receiver_HWPPM.h)
 // You need to select one of these channel order definitions for PPM receiver
 //#define SKETCH_SERIAL_SUM_PPM SERIAL_SUM_PPM_1 //For Graupner/Spektrum (DEFAULT)
 #define SKETCH_SERIAL_SUM_PPM SERIAL_SUM_PPM_2 //For Robe/Hitec/Futaba
 //#define SKETCH_SERIAL_SUM_PPM SERIAL_SUM_PPM_3 //For some Hitec/Sanwa/Others
 
-#define UseRSSIFaileSafe // read rssi for receiver failsafe NEED A RECEIVER WITH FAILSAVE CONNECTED ON PIN A6 OF THE SHIELD
+//#define UseRSSIFaileSafe // read rssi for receiver failsafe NEED A RECEIVER WITH FAILSAVE CONNECTED ON PIN A6 OF THE SHIELD
 
 //
 // *******************************************************************************************************************************
@@ -134,7 +134,7 @@
 // Optional audio channel telemetry (for ground station tracking purposes)
 // This will output telemetry at slow (1200baud) rate once per second on Serial2. 
 // *******************************************************************************************************************************
-//#define SlowTelemetry  // Enables Wireless telemetry on Serial2
+#define SlowTelemetry  // Enables Wireless telemetry on Serial2
 
 
 //
@@ -147,22 +147,22 @@
 // D13 to D35 for yaw, connect servo to SERVO3
 // Please note that you will need to have battery connected to power on servos with v2.0 shield
 // *******************************************************************************************************************************
-//#define CameraControl
+#define CameraControl
 
 //
 // *******************************************************************************************************************************
 // On screen display implementation using MAX7456 chip. See MAX7456.h in libraries for more info and configuration.
 // For more information on how to setup OSD please refer to http://aeroquad.com/showwiki.php?title=On-Screen-Display
 // *******************************************************************************************************************************
-//#define OSD
+#define OSD
 //#define ShowRSSI
 //#define PAL                       // uncomment this to default to PAL video
 //#define AUTODETECT_VIDEO_STANDARD // detect automatically, signal must be present at Arduino powerup!
 //#define CALLSIGN "Aeroquad"         // Show (optional) callsign
-//#define ShowAttitudeIndicator     // Display the attitude indicator calculated by the AHRS
-//#define USUnits                   // Enable for US units (feet,miles,mph)
+#define ShowAttitudeIndicator     // Display the attitude indicator calculated by the AHRS
+#define USUnits                   // Enable for US units (feet,miles,mph)
 
-//#define OSD_SYSTEM_MENU           // Menu system, currently only usable with OSD
+#define OSD_SYSTEM_MENU           // Menu system, currently only usable with OSD
 
 /****************************************************************************
  ****************************************************************************
