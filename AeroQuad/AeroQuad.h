@@ -31,12 +31,13 @@
 #include "receiver.h"
 
 // Flight Software Version
-#define SOFTWARE_VERSION 3.1
+#define SOFTWARE_VERSION 3.1.A-MMonti
 
 #if defined WirelessTelemetry
   #define BAUD 111111 // use this to be compatible with USB and XBee connections
 #else
-  #define BAUD 115200
+//  #define BAUD 115200
+  #define BAUD 111111
 #endif  
 
 // Analog Reference Value

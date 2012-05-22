@@ -201,7 +201,8 @@ void readPilotCommands() {
 
       navigationState = ON;
     }
-    else if (receiverCommand[AUX1] < 1600) {  // Enter in position hold state
+//    else if (receiverCommand[AUX1] < 1600) {  // Enter in position hold state
+      else if (receiverCommand[AUX1] < 1400) {  // Enter in position hold state
       
       if (isStorePositionNeeded) {
         
